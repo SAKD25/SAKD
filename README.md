@@ -45,7 +45,7 @@ cd projects/MonoRCNN
 ```
 
 
-## Inference
+## validation
 
 First, you need to setting the KITTI dataset
 

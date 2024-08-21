@@ -15,10 +15,13 @@ Clone the repo.
 ```
 git clone https://github.com/SAKD25/SAKD.git
 ```
-
-Please use the Detectron2 included in this project.
+install requirements
 ```
 pip install -r requirements.txt
+```
+
+Then please use the Detectron2 included in this project.
+```
 python setup.py build develop
 ```
 

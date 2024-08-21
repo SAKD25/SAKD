@@ -63,11 +63,11 @@ Then, run below python file
 
 ```
 cd projects/MonoRCNN
-./main.py --config-file config/MonoRCNN_KITTI_SAKD_ResNet18.yaml --num-gpus 1 --resume --eval-only   ## for SAKD student model
+./main.py --config-file config/MonoRCNN_KITTI_SAKD_ResNet18.yaml --num-gpus 1 --resume --eval-only
 or
-./main.py --config-file config/MonoRCNN_KITTI_ResNet18.yaml --num-gpus 1 --resume --eval-only        ## for Vanilla student model
+./main.py --config-file config/MonoRCNN_KITTI_ResNet18.yaml --num-gpus 1 --resume --eval-only
 or
-./main.py --config-file config/MonoRCNN_KITTI_ResNet50.yaml --num-gpus 1 --resume --eval-only        ## for Vanilla teacher model
+./main.py --config-file config/MonoRCNN_KITTI_ResNet50.yaml --num-gpus 1 --resume --eval-only
 ```
 Set [`VISUALIZE`] yaml file `True` to visualize 3D object detection results (saved in `output/evaluation/test/visualization`).
 

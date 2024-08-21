@@ -16,8 +16,8 @@ TEST:
 DATASETS:
   PATH: "../KITTI" 
   SPLIT: "demo"
-  TRAIN: ("KITTI_val1_train",)
-  TEST: ("KITTI_val1_val",)
+  TRAIN: ("KITTI_demo_train",)
+  TEST: ("KITTI_demo_val",)
 DATALOADER:
   NUM_WORKERS: 16
 SOLVER:

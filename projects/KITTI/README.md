@@ -1,6 +1,8 @@
 ## KITTI
 We take the KITTI val1 split as an example to show how to prepare the training and test subset.
 
+*https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d
+
 1. Download the training dataset of the KITTI monocular 3D object detection task, and organize the downloaded files as follows:
 ```
 ├── projects

@@ -1,0 +1,17 @@
+
+projects/MonoRCNN/output/*
+projects/KITTI/training
+projects/KITTI/val1/val
+projects/KITTI/val1/train
+projects/KITTI/val1/KITTI_val1_val.json
+projects/KITTI/val1/KITTI_val1_train.json
+projects/MonoRCNN/output
+projects/MonoRCNN/output_debug
+projects/MonoRCNN/output_backup
+projects/waymo
+output/*
+build/*
+*.pyc
+projects/MonoRCNN/core
+
+#projects/KITTI

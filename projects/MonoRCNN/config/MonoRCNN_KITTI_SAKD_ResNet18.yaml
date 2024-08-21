@@ -1,0 +1,77 @@
+VERSION: 2
+SEED: 24
+
+OUTPUT_DIR: 'output/SAKD_ResNet18'
+
+INPUT:
+  CONS_SIZE: (512, 1760)
+TRAINING:
+  FLIP_PROB: 0.5
+  PMD_PROB: 1.0
+  MIN_VIS: 0.3
+  MIN_HEIGHT: 22
+  POS_LABELS: ['Car', 'Pedestrian', 'Cyclist']
+TEST:
+  VISUALIZE: False
+DATASETS:
+  PATH: "../KITTI" 
+  SPLIT: "val1"
+  TRAIN: ("KITTI_val1_train",)
+  TEST: ("KITTI_val1_val",)
+DATALOADER:
+  NUM_WORKERS: 16
+SOLVER:
+  IMS_PER_BATCH: 1
+  BASE_LR: 0.02
+  STEPS: (15000, 20000, 25000)
+  MAX_ITER: 30000
+  CHECKPOINT_PERIOD: 5000
+  CLIP_GRADIENTS:
+    ENABLED: True
+    CLIP_VALUE: 0.01
+MODEL:
+  META_ARCHITECTURE: "GeneralizedRCNN_SAKD_harmonize"
+  BACKBONE:
+    NAME: "build_resnet_fpn_backbone"
+  RESNETS:
+    DEPTH: 18
+    OUT_FEATURES: ["res2", "res3", "res4", "res5"]
+    DEFORM_ON_PER_STAGE: [False, True, True, True] # on Res3,Res4,Res5
+  WEIGHTS: "output/MonoRCNN++_SAKD_ResNet18.pth"
+  FPN:
+    IN_FEATURES: ["res2", "res3", "res4", "res5"]
+    OUT_CHANNELS: 256
+  ANCHOR_GENERATOR:
+    SIZES: [[32, 64, 128, 256, 512]]  # One size for each in feature map
+    ASPECT_RATIOS: [[0.5, 1.0, 2.0]]  # Three aspect ratios (same for all in feature maps)
+  RPN:
+    IN_FEATURES: ["p2"]
+    PRE_NMS_TOPK_TEST: 6000
+    POST_NMS_TOPK_TEST: 1000
+  ROI_HEADS:
+    NAME: "ALLROIHeads_harmonize"
+    IN_FEATURES: ["p2", "p3", "p4", "p5"]
+    BATCH_SIZE_PER_IMAGE: 512   # final proposals number
+    NUM_CLASSES: 3
+    SCORE_THRESH_TEST: 0.5
+    NMS_THRESH_TEST: 0.5
+  ROI_BOX_HEAD:
+    NAME: "FastRCNNConvFCHead"
+    NUM_FC: 2
+    FC_DIM: 1024
+    POOLER_RESOLUTION: 7
+  ROI_ATT_HEAD:
+    NAME: "ATTHead"
+    NUM_FC: 2
+    FC_DIM: 1024
+    POOLER_RESOLUTION: 7
+    KPT_LOSS_WEIGHT: 5.0
+  ROI_DIS_HEAD:
+    NAME: "DISHead"
+    NUM_FC: 2
+    FC_DIM: 1024
+    POOLER_RESOLUTION: 7
+  PROPOSAL_GENERATOR:
+    NAME: "RPN"
+
+

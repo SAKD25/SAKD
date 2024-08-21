@@ -8,7 +8,6 @@ SAKD is Knowlede distillation method for Monocular-camera based 3D object detect
 
 * Python 3.6
 * PyTorch 1.5.0 
-* Detectron2 0.1.3
 
 
 Clone the repo.

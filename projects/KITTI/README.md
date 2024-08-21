@@ -18,7 +18,6 @@ We take the KITTI val1 split as an example to show how to prepare the training a
 
 2. Prepare the training and test subset of the KITTI val1 split:
 ```
-cd SAKD/projects/KITTI
 python prepare_KITTI.py
 ```
 

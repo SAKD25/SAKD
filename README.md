@@ -19,6 +19,7 @@ install requirements
 ```
 pip install -r requirements.txt
 apt-get install libboost-all-dev
+apt-get install libgl1
 ```
 
 Then please use the Detectron2 included in this project.

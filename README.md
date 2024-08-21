@@ -22,19 +22,6 @@ python setup.py build develop
 ```
 
 
-## Demo
-For visualizing SAKD
-```
-cd projects/MonoRCNN
-./main.py --config-file config/MonoRCNN_KITTI_SAKD_ResNet18_demo.yaml --num-gpus 1 --resume --eval-only
-```
-
-
-
-
-## Dataset Preparation
-* [KITTI](projects/KITTI/README.md)
-
 ## Model
 * [MonoRCNN++_SAKD_ResNet18](https://drive.google.com/file/d/1xhHFEk5jpAjinyC_9a98yHQgZdhMkfEL/view?usp=sharing)
 * [MonoRCNN++_ResNet50](https://drive.google.com/file/d/1WiPAvhNYNG510hpYseMvLm6Ko2LrmfHI/view?usp=sharing)
@@ -50,7 +37,21 @@ Organize the downloaded models as follows:
 │   │   │   ├── MonoRCNN++_ResNet18.pth
 ```
 
+## Demo
+For visualizing SAKD
+```
+cd projects/MonoRCNN
+./main.py --config-file config/MonoRCNN_KITTI_SAKD_ResNet18_demo.yaml --num-gpus 1 --resume --eval-only
+```
+
+
 ## Inference
+
+First, you need to setting the KITTI dataset
+
+* [KITTI](projects/KITTI/README.md)
+
+
 ```
 cd projects/MonoRCNN
 ./main.py --config-file config/MonoRCNN_KITTI_SAKD_ResNet18.yaml --num-gpus 1 --resume --eval-only

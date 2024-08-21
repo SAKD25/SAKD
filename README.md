@@ -17,7 +17,7 @@ git clone https://github.com/SAKD25/SAKD.git
 ```
 install requirements
 ```
-./install.sh
+bash ./install.sh
 ```
 
 Then please use the Detectron2 included in this project.

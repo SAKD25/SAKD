@@ -18,6 +18,7 @@ git clone https://github.com/SAKD25/SAKD.git
 
 Please use the Detectron2 included in this project.
 ```
+pip install matplotlib==3.7.5
 python setup.py build develop
 ```
 

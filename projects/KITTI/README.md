@@ -9,6 +9,11 @@ We take the KITTI val1 split as an example to show how to prepare the training a
 │   │   │   ├── calib
 │   │   │   ├── image_2
 │   │   │   ├── label_2
+│   │   ├── testing
+│   │   │   ├── calib
+│   │   │   ├── image_2
+
+
 ```
 
 2. Prepare the training and test subset of the KITTI val1 split:

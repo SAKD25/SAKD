@@ -51,25 +51,25 @@ First, you need to setting the KITTI dataset
 
 * [KITTI](projects/KITTI/README.md)
 
+Then, run below python file
 
 ```
 cd projects/MonoRCNN
-./main.py --config-file config/MonoRCNN_KITTI_SAKD_ResNet18.yaml --num-gpus 1 --resume --eval-only
+./main.py --config-file config/MonoRCNN_KITTI_SAKD_ResNet18.yaml --num-gpus 1 --resume --eval-only   ## for SAKD student model
 or
-./main.py --config-file config/MonoRCNN_KITTI_ResNet18.yaml --num-gpus 1 --resume --eval-only
+./main.py --config-file config/MonoRCNN_KITTI_ResNet18.yaml --num-gpus 1 --resume --eval-only        ## for Vanilla student model
 or
-./main.py --config-file config/MonoRCNN_KITTI_ResNet50.yaml --num-gpus 1 --resume --eval-only
+./main.py --config-file config/MonoRCNN_KITTI_ResNet50.yaml --num-gpus 1 --resume --eval-only        ## for Vanilla teacher model
 ```
 Set [`VISUALIZE`] yaml file `True` to visualize 3D object detection results (saved in `output/evaluation/test/visualization`).
-
-## License
-
-Detectron2 is released under the [Apache 2.0 license](LICENSE).
 
 
 ## Training
 Training Code will be available soon.
 
+## License
+
+Detectron2 is released under the [Apache 2.0 license](LICENSE).
 
 
 ## Acknowledgement

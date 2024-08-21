@@ -78,6 +78,9 @@ def do_test(cfg, model, iteration=None):
         if dataset_name == 'KITTI_val1_val' :
             evaluate_on_dataset(cfg, result_dir, iteration)
             logger.info("Evaluation for {} is completed.".format(dataset_name))
+        elif dataset_name == 'KITTI_demo_val':
+            vis_dir = os.path.join(cfg.OUTPUT_DIR, 'evaluation', iteration, 'visualization')
+            print("visualization save at:",vis_dir)
 
 
 def setup(args):

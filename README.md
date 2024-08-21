@@ -18,6 +18,7 @@ git clone https://github.com/SAKD25/SAKD.git
 install requirements
 ```
 pip install -r requirements.txt
+apt-get update
 apt-get install libboost-all-dev
 apt-get install libgl1
 ```

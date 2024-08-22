@@ -21,11 +21,11 @@ from ..proposal_generator import build_proposal_generator
 from ..roi_heads import build_roi_heads, build_roi_SAKD
 from .build import META_ARCH_REGISTRY
 
-__all__ = ["GeneralizedRCNN_SAKD_harmonize"]
+__all__ = ["GeneralizedRCNN_SAKD"]
 
 
 @META_ARCH_REGISTRY.register()
-class GeneralizedRCNN_SAKD_harmonize(nn.Module):
+class GeneralizedRCNN_SAKD(nn.Module):
     """
     Generalized R-CNN. Any models that contains the following three components:
     1. Per-image feature extraction (aka backbone)
@@ -89,7 +89,7 @@ class GeneralizedRCNN_SAKD_harmonize(nn.Module):
             results = self.roi_heads.forward_with_given_boxes(features, detected_instances)
 
         if do_postprocess:
-            return GeneralizedRCNN_SAKD_harmonize._postprocess(results, batched_inputs, images.image_sizes)
+            return GeneralizedRCNN_SAKD._postprocess(results, batched_inputs, images.image_sizes)
         else:
             return results
 

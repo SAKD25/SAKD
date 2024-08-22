@@ -30,7 +30,7 @@ SOLVER:
     ENABLED: True
     CLIP_VALUE: 0.01
 MODEL:
-  META_ARCHITECTURE: "GeneralizedRCNN_SAKD_harmonize"
+  META_ARCHITECTURE: "GeneralizedRCNN_SAKD"
   BACKBONE:
     NAME: "build_resnet_fpn_backbone"
   RESNETS:

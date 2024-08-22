@@ -83,7 +83,7 @@ Set [`VISUALIZE`] yaml file `True` to visualize 3D object detection results (sav
 Training Code will be available soon.
 
 ## License
-
+This project is licensed under CC BY-NC 4.0 license. Redistribution and use of the code for non-commercial purposes should follow this license.
 Detectron2 is released under the [Apache 2.0 license](LICENSE).
 
 

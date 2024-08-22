@@ -306,7 +306,7 @@ def model_pred_function(image, model, cfg):
     height, width = image.shape[:2]
     image = torch.as_tensor(image.astype("float32").transpose(2, 0, 1))
     inputs = {"image": image, "height": height, "width": width}
-    if ((cfg.MODEL.META_ARCHITECTURE == "GeneralizedRCNN_SAKD_harmonize")):
+    if ((cfg.MODEL.META_ARCHITECTURE == "GeneralizedRCNN_SAKD")):
         predictions = model([inputs],None,None,None,None)[0]
     else:
         predictions = model([inputs])[0]

@@ -2,7 +2,7 @@
 VERSION: 2
 SEED: 24
 
-OUTPUT_DIR: 'output/ResNet18'
+OUTPUT_DIR: 'output/ResNet50'
 
 INPUT:
   CONS_SIZE: (512, 1760)

@@ -53,6 +53,10 @@ For visualizing SAKD
 ```
 cd projects/MonoRCNN
 ./main.py --config-file config/MonoRCNN_KITTI_SAKD_ResNet18_demo.yaml --num-gpus 1 --resume --eval-only
+or
+./main.py --config-file config/MonoRCNN_KITTI_ResNet18_demo.yaml --num-gpus 1 --resume --eval-only
+or
+./main.py --config-file config/MonoRCNN_KITTI_ResNet50_demo.yaml --num-gpus 1 --resume --eval-only
 ```
 
 

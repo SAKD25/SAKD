@@ -7,7 +7,7 @@ import torch
 import torch.nn.functional as F
 
 
-def draw_image(image, corners, color=(4, 111, 241), thickness=2):
+def draw_image(image, corners, color=(0, 0, 255), thickness=2):
     face_idx = [[0,1,5,4],
                 [1,2,6,5],
                 [2,3,7,6],
@@ -61,10 +61,10 @@ def draw_bev_rect(image, rect, color = (4, 111, 241), thickness=2):  # default c
     yellow = (4, 239, 242)
     orange = (4,111,241)
 
-    cv2.line(image, point_list[0], point_list[1], color, thickness)
-    cv2.line(image, point_list[1], point_list[2], color, thickness)
+    cv2.line(image, point_list[0], point_list[1], yellow, thickness)
+    cv2.line(image, point_list[1], point_list[2], yellow, thickness)
     cv2.line(image, point_list[2], point_list[3], red, thickness)
-    cv2.line(image, point_list[3], point_list[0], color, thickness)
+    cv2.line(image, point_list[3], point_list[0], yellow, thickness)
 
     highest_sum = 0
     highest_point = (0,0)

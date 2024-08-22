@@ -6,7 +6,7 @@ from .build import META_ARCH_REGISTRY, build_model
 from .panoptic_fpn import PanopticFPN
 
 from .rcnn import GeneralizedRCNN, ProposalNetwork
-from .rcnn_SAKD_harmonize import GeneralizedRCNN_SAKD_harmonize
+from .rcnn_SAKD_harmonize import GeneralizedRCNN_SAKD
 from .retinanet import RetinaNet
 from .semantic_seg import SEM_SEG_HEADS_REGISTRY, SemanticSegmentor, build_sem_seg_head
 

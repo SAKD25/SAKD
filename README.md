@@ -90,3 +90,4 @@ Detectron2 is released under the [Apache 2.0 license](LICENSE).
 ## Acknowledgement
 * [Detectron2](https://github.com/facebookresearch/detectron2)
 * [MonoRCNN++](https://github.com/Rock-100/MonoDet)
+* [KITTI](https://www.cvlibs.net/datasets/kitti/index.php)

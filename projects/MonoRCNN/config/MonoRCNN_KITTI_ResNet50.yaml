@@ -10,7 +10,7 @@ TRAINING:
   MIN_HEIGHT: 22
   POS_LABELS: ['Car', 'Pedestrian', 'Cyclist']
 TEST:
-  VISUALIZE: True
+  VISUALIZE: False
 DATASETS:
   PATH: "../KITTI"
   SPLIT: "val1"

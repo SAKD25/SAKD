@@ -76,7 +76,7 @@ or
 or
 ./main.py --config-file config/MonoRCNN_KITTI_ResNet50.yaml --num-gpus 1 --resume --eval-only
 ```
-Set [`VISUALIZE`] yaml file `True` to visualize 3D object detection results (saved in `output/evaluation/test/visualization`).
+Set [`VISUALIZE`] yaml file `True` to visualize 3D object detection results (saved in `output/(config dir.)/evaluation/test/visualization`).
 
 
 ## Training
